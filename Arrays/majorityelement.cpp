@@ -2,6 +2,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+https://www.geeksforgeeks.org/majority-element/ 
+without extra memory, Time complexity : O(n)
+*/ 
 int main()
 {
 	int current, current_count, max, max_count, temp;
