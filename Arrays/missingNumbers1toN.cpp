@@ -3,6 +3,12 @@
 
 using namespace std;
 
+/*
+https://www.geeksforgeeks.org/find-missing-elements-from-an-array/
+Problem statement:
+Find missing numbers from [1-N] in an array of size N
+*/
+
 int main()
 {
 	int size, temp;

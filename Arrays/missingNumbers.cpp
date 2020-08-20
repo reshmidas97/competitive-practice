@@ -3,6 +3,13 @@
 
 using namespace std;
 
+/*
+ https://www.geeksforgeeks.org/find-missing-elements-from-an-array/
+My modified problem statement:
+The range is not given, we have to find missing numbers from 
+1 to the maximum number in the given list
+*/
+
 int main()
 {
 	int size, temp, max;
