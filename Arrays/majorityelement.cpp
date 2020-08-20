@@ -54,7 +54,10 @@ int main()
 		cout << current_count << " ";
 	}
 
-	
-	cout << endl << "Maximum occurence: " << max << " " << max_count << endl;
+	if(max_count > v.size()/2)
+		cout << endl << "Maximum occurence: " << max_count << " of Element " << max << endl;
+	else
+		cout << endl << "No Majority Element" << endl;
+
 	return 0;
 }
