@@ -60,7 +60,10 @@ int main()
 		}
 	}
 
-	
-	cout << endl << "Maximum occurence: " << max << " of " << "Element " << occurence[index] << endl;
+	if(max > v.size()/2)
+		cout << endl << "Maximum occurence: " << max << " of " << "Element " << v[index] << endl;
+	else
+		cout << "No Majority Element" << endl;
+
 	return 0;
 }
