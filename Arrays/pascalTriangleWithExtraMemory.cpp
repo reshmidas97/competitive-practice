@@ -2,13 +2,12 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-
 /*
 https://www.geeksforgeeks.org/pascal-triangle/
-Pascal Triangle with Time complexity: O(n)
+Pascal Triangle with Auxiliary Memory: O(n)
+Time Complexity: O(n^2)
 */
-
-vector<vector<int> > generate(int numRows) 
+vector<vector<int> > generate(int numRows)
     {
         int temp;
         vector< vector<int> > v;
