@@ -1,8 +1,8 @@
 #include <iostream>
 
-using namespace std;
+using namespace istd;
 
-int main()
+void main()
 {
-	return 0;
+	
 }
