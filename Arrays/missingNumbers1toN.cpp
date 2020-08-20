@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	int size, temp, max;
+	int size, temp;
 	cin >> size;
 	vector<int> v;
 
@@ -15,15 +15,12 @@ int main()
 		v.push_back(temp);
 	}
 
-	sort(v.begin(), v.end());
-	max = v[size-1];
-
-	vector<int> vec(max, 0);
+	vector<int> vec(size, 0);
 
 	for(int i = 0 ; i < size ; i++)
 		vec[v[i]-1] = 1;
 
-	for(int i = 0 ; i < max ; i++)
+	for(int i = 0 ; i < size ; i++)
 	{
 		if(vec[i] == 0)
 			cout << i+1 << " ";
