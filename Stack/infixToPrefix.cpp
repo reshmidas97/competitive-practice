@@ -6,7 +6,7 @@ using namespace std;
 Question: geeksforgeeks.org/stack-set-2-infix-to-postfix/
 Video : https://www.youtube.com/watch?v=vq-nUF0G4fI
 
-Infix to Prefix Conversion
+Infix to Postfix Conversion
 */
 	
 bool isOperand(char ch)
@@ -34,7 +34,7 @@ int checkPrecedence(char ch)
 	}
 }
 
-string infixToPrefix(string s)
+string infixToPostfix(string s)
 {
 	string new_s;
 	stack<char> operators;
@@ -77,7 +77,7 @@ int main()
 	string str;
 	cin >> str;
 	cout << "Infix Expression: " << str << endl;
-	cout << "Postfix Expression: " << infixToPrefix(str) << endl;
+	cout << "Postfix Expression: " << infixToPostfix(str) << endl;
 	return 0;
 
 }
