@@ -3,6 +3,13 @@
 
 using namespace std;
 
+/*
+https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/
+reate a data structure kStacks that represents k stacks. Implementation of kStacks 
+should use only one array, i.e., k stacks should use the same array for storing elements. 
+Following functions must be supported by kStacks.
+*/
+
 void push(int value, int s, int arr[], int next[], int& free, int top[])
 {
 	int temp = free;
@@ -28,6 +35,7 @@ void displayStack(int s, int arr[], int next[], int free, int top[])
 		cout << endl;
 	}
 }
+
 int pop(int s, int arr[], int next[], int& free, int top[])
 {
 	int temp;
@@ -37,8 +45,8 @@ int pop(int s, int arr[], int next[], int& free, int top[])
 	free = top[s-1];
 	top[s-1] = temp;
 	return popp;
-
 }
+
 int main()
 {
 	int stacks;
@@ -68,7 +76,8 @@ int main()
 		cout << "Enter your choice" << endl;
 		cin >> choice;
 
-		switch(choice)		{
+		switch(choice)		
+		{
 			case 1:
 				cout << "Enter the number to be pushed" << endl;
 				cin >> num;
