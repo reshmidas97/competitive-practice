@@ -36,15 +36,22 @@ void displayStack(int s, int arr[], int next[], int free, int top[])
 	}
 }
 
-int pop(int s, int arr[], int next[], int& free, int top[])
+void pop(int s, int arr[], int next[], int& free, int top[])
 {
-	int temp;
-	int popp = arr[top[s-1]]; 
-	temp = next[top[s-1]];
-	next[top[s-1]] = free;
-	free = top[s-1];
-	top[s-1] = temp;
-	return popp;
+	if(top[s-1] != -1)
+	{
+		int temp;
+		int popp = arr[top[s-1]]; 
+		temp = next[top[s-1]];
+		next[top[s-1]] = free;
+		free = top[s-1];
+		top[s-1] = temp;
+		cout << "Popped: " << popp << endl;
+	}
+	else
+	{
+		cout << "Stack Empty" << endl;
+	}
 }
 
 int main()
@@ -72,7 +79,7 @@ int main()
 	do
 	{
 		cout << "\nMENU: " << endl;
-		cout << "1 - Push \2 - Pop \n3 - Exit" << endl;
+		cout << "1 - Push \n2 - Pop \n3 - Exit" << endl;
 		cout << "Enter your choice" << endl;
 		cin >> choice;
 
@@ -83,7 +90,7 @@ int main()
 				cin >> num;
 				cout << "Enter the stack in which the number is to be pushed" << endl;
 				cin >> stack_number;
-				if(stack_number < 1 && stack_number > stacks)
+				if(stack_number < 1 || stack_number > stacks)
 				{
 					cout << "Invalid Entry" << endl;
 					break;
@@ -95,7 +102,13 @@ int main()
 			case 2:
 				cout << "Enter the stack number from which you wish to pop" << endl;
 				cin >> stack_number;
-				cout << "Popped: " << pop(stack_number, arr, next, free, top) << endl;
+				if(stack_number < 1 || stack_number > stacks)
+				{
+					cout << "Invalid Entry" << endl;
+					break;
+				}
+				pop(stack_number, arr, next, free, top);
+
 				break;
 
 
