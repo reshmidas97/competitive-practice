@@ -1,0 +1,18 @@
+import java.util.*;
+public class Solution 
+{
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int maxSubArray(final int[] A) 
+    {
+        int curr = A[0];
+        int max = A[0];
+        
+        for(int i = 1 ; i < A.length ; i++)
+        {
+            curr = Math.max(A[i], curr + A[i]);
+            max = Math.max(max, curr);
+        }
+        
+        return max;
+    }
+}
