@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 
 QUESTION:
@@ -9,6 +10,8 @@ https://www.interviewbit.com/problems/maximum-absolute-difference/
 */
 
 
+=======
+>>>>>>> 2e50e04c61bde40df1d36a641a48dd7fd44767c3
 #include<bits/stdc++.h>
 
 using namespace std;
